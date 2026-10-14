@@ -6,8 +6,7 @@
      align-items: center;
      flex-direction: column;
      /* A vibrant gradient background makes the glass pop */
-     background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-     font-family: sans-serif;
+     background: #F9F37B
  }
 
  .header {
@@ -25,9 +24,9 @@
  }
 
  .glass {
-     width: 100%;
+     width: 50%;
      height: 275px;
-     padding: 2rem;
+     padding: 0;
      color: white;
      /* Glassmorphism Styles */
      background: rgba(255, 255, 255, 0.1);
@@ -37,6 +36,11 @@
      border: 1px solid rgba(255, 255, 255, 0.2);
      box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.2);
      box-sizing: border-box;
+     margin-inline: auto;
+     display: flex;
+     flex-direction: column;
+     justify-content: flex-end;
+     align-items: center;
  }
 
  .drink-name {
@@ -50,7 +54,7 @@
      width: 100%;
      background: linear-gradient(to right,
              transparent 0%,
-             #000000 50%,
+             #b1aaa5 50%,
              transparent 100%);
      margin-top: 15px;
  }
@@ -72,4 +76,25 @@
  .specs {
      font-size: 12px;
      white-space: nowrap;
+ }
+
+.layers {
+    width:95%;
+    height: 180px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    padding-bottom: 2px;
+    box-sizing: border-box;
+    overflow: hidden;
+}
+ .crema{
+    background-color:#BE5103;
+    height: 15%;
+    border-radius: 20px 20px 0 0;
+ }
+ .espresso{
+    background-color: #3F1B01;
+    height:65%;
+     border-radius: 0 0 20px 20px
  }
