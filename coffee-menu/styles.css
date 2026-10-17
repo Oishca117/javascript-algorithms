@@ -1,9 +1,9 @@
  body {
      margin: 0;
-     height: 100vh;
+     min-height: 100vh;
      display: flex;
-     justify-content: center;
-     align-items: center;
+     justify-content: flex-start;
+     align-items: stretch;
      flex-direction: column;
      /* A vibrant gradient background makes the glass pop */
      background: #F9F37B
@@ -14,18 +14,29 @@
      justify-content: center;
      align-items: center;
  }
+  .intro {
+     display: flex;
+     justify-content: center;
+     align-items: center;
+ }
+  .disclaimer {
+    color: red;
+     display: flex;
+     justify-content: center;
+     align-items: center;
+ }
 
  .drink-card {
      border: black solid 1px;
      border-radius: 20px;
      box-sizing: border-box;
-     width: 320px;
+     width: 15%;
      padding: 20px;
  }
 
  .glass {
-     width: 50%;
-     height: 275px;
+     width: 75%;
+     height: 200px;
      padding: 0;
      color: white;
      /* Glassmorphism Styles */
@@ -70,12 +81,10 @@
 
  .ingredients {
      font-size: 12px;
-     white-space: nowrap;
  }
 
  .specs {
      font-size: 12px;
-     white-space: nowrap;
  }
 
 .layers {
@@ -98,3 +107,22 @@
     height:65%;
      border-radius: 0 0 20px 20px
  }
+
+ .menu {
+    display: flex;
+    gap: 20px;
+    padding: 20px;
+    box-sizing: border-box;
+    justify-content: center;
+width: 100%;
+}
+
+ .mainContent {
+    max-width: 1200px;
+    width: 100%;
+    margin-inline: auto;
+}
+
+.introduction {
+    flex-shrink: 0;
+}

@@ -4,7 +4,7 @@ const espressoBasedDrinks = [{
   name: "Espresso",
   description: "A concentrated coffee beverage",
   ingredients: ["Finely ground coffee beans", "Hot water"],
-  specs: "18g coffee ~ 2oz",
+  specs: "18g coffee | ~ 2oz",
   layers: [
     { name: "crema", color: "#BE5103", height: 15 },
     { name: "espresso", color: "#3F1B01", height: 65 }
@@ -14,7 +14,7 @@ const espressoBasedDrinks = [{
   name: "Americano",
   description: "Espresso diluted in water",
   ingredients: ["Espresso", "water"],
-  specs: "2oz espresso | ~6-10oz water",
+  specs: "2oz espresso | ~ 6-10oz water",
   layers: [
     { name: "crema", color: "#BE5103", height: 10 },
     { name: "espresso", color: "#3F1B01", height: 30 },
@@ -24,7 +24,7 @@ const espressoBasedDrinks = [{
 {
   name: "Latte",
   description: "Espresso with steamed milk",
-  ingredients: ["Espresso", "milk (personal preference)"],
+  ingredients: ["Espresso", "milk  (personal preference)"],
   specs: "2oz espresso | ~10oz steamed milk",
   layers: [
     { name: "crema", color: "#BE5103", height: 10 },
@@ -36,7 +36,7 @@ const espressoBasedDrinks = [{
   name: "Cappuccino",
   description: "Espresso with steamed milk and foam",
   ingredients: ["Espresso", "milk (personal preference)"],
-  specs: "2oz espresso | ~4oz steamed milk ~2oz foam",
+  specs: "2oz espresso | ~4oz steamed milk |  ~2oz foam",
   layers: [
     { name: "crema", color: "#BE5103", height: 10 },
     { name: "espresso", color: "#3F1B01", height: 30 },
@@ -74,5 +74,47 @@ for(let layer of drink.layers){
 glass.appendChild(layers);
 newDrinkArticle.append(glass);
 menu.append(newDrinkArticle);
+
+//Creates the dividing line in the drink card to separate the visual from the text content
+const divider = document.createElement("div");
+divider.classList = "divider";
+
+newDrinkArticle.append(divider);
+
+//creates container for all text going into my drink card
+const cardText = document.createElement("div");
+cardText.classList = "card-text";
+
+const drinkName = document.createElement("h2");
+drinkName.classList= "drink-name";
+
+drinkName.textContent = drink.name;
+
+const description = document.createElement("p");
+
+description.classList = "description";
+description.textContent = drink.description;
+
+const ingredients = document.createElement("p")
+
+ingredients.classList= ("ingredients");
+
+ingredients.textContent = drink.ingredients.join(", ");
+
+const specs = document.createElement("p")
+
+specs.classList= ("specs");
+
+specs.textContent = drink.specs;
+
+cardText.append(drinkName);
+cardText.append(description);
+cardText.append(ingredients);
+cardText.append(specs);
+newDrinkArticle.append(cardText);
 }//end for of loop 
+
+
 }//end function 
+
+createDrinkCards(espressoBasedDrinks);
